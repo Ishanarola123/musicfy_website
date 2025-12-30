@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 export const LandingPage = () => {
   const [scrollY, setScrollY] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
