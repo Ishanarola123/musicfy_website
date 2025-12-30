@@ -280,7 +280,7 @@ export const LandingPage = () => {
           </div>
           <div className="footer-section">
             <h4 className="footer-heading">Resources</h4>
-            <a href="https://privacy-policy-muscify-n9le.vercel.app/" target="_blank" rel="noopener noreferrer" className="footer-link">Privacy Policy</a>
+            <a onClick={() => navigate('/privacy')} className="footer-link" style={{ cursor: 'pointer' }}>Privacy Policy</a>
             <a href="https://github.com/publicappsrepo/musicfy_android.git" target="_blank" rel="noopener noreferrer" className="footer-link">GitHub</a>
             <a href="https://github.com/RetroMusicPlayer/RetroMusicPlayer" target="_blank" rel="noopener noreferrer" className="footer-link">RetroMusicPlayer</a>
           </div>
