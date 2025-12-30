@@ -221,7 +221,7 @@ export const LandingPage = () => {
                 <span>Open source code you can verify yourself</span>
               </li>
             </ul>
-            <a onClick={() => navigate('/privacy')} className=\"privacy-link\" style={{ cursor: 'pointer' }}>
+            <a onClick={() => navigate('/privacy')} className="privacy-link" style={{ cursor: 'pointer' }}>
               Read Full Privacy Policy
               <ChevronRight className="link-arrow" />
             </a>
