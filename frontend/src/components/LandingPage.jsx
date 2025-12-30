@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Music, Shield, Download, Zap, Heart, Headphones, Github, Play, ChevronRight, Star, Lock, Code, Users } from 'lucide-react';
 import { Button } from './ui/button';
 import { Card, CardContent } from './ui/card';
+import { useNavigate } from 'react-router-dom';
 
 export const LandingPage = () => {
   const [scrollY, setScrollY] = useState(0);
