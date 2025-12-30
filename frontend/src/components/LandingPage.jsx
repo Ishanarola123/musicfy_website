@@ -221,7 +221,7 @@ export const LandingPage = () => {
                 <span>Open source code you can verify yourself</span>
               </li>
             </ul>
-            <a href="https://privacy-policy-muscify-n9le.vercel.app/" target="_blank" rel="noopener noreferrer" className="privacy-link">
+            <a onClick={() => navigate('/privacy')} className=\"privacy-link\" style={{ cursor: 'pointer' }}>
               Read Full Privacy Policy
               <ChevronRight className="link-arrow" />
             </a>
