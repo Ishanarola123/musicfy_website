@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const APP_URL =
   "https://play.google.com/store/apps/details?id=com.play_pause.musicplayer&pcampaignid=web_share";
@@ -150,6 +150,10 @@ export const LandingPage = () => {
               Experience the ultimate free music player that respects your
               privacy. Play your entire music library offline with zero data
               collection.
+            </p>
+            <p className="hero-description">
+              Loved by 5,000+ users enjoy offline music with{" "}
+              <strong>Musicfy.</strong>
             </p>
             <div className="hero-buttons">
               <Button
@@ -285,14 +289,14 @@ export const LandingPage = () => {
                 <span>Open source code you can verify yourself</span>
               </li>
             </ul>
-            <a
-              onClick={() => navigate("/privacy")}
+            <Link
+              to={"/privacy"}
               className="privacy-link"
               style={{ cursor: "pointer" }}
             >
               Read Full Privacy Policy
               <ChevronRight className="link-arrow" />
-            </a>
+            </Link>
           </div>
           <div className="privacy-visual">
             <div className="privacy-card">
