@@ -18,6 +18,10 @@ import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
 import { useNavigate } from "react-router-dom";
 
+const APP_URL =
+  "https://play.google.com/store/apps/details?id=com.play_pause.musicplayer&pcampaignid=web_share";
+const SOURCE_CODE_URL = "https://github.com/publicappsrepo/musicfy_android";
+
 export const LandingPage = () => {
   const [scrollY, setScrollY] = useState(0);
   const navigate = useNavigate();
@@ -93,8 +97,6 @@ export const LandingPage = () => {
     }
   };
 
-  const APP_URL = "https://www.google.com/";
-
   return (
     <div className="landing-page">
       {/* Header */}
@@ -150,11 +152,23 @@ export const LandingPage = () => {
               collection.
             </p>
             <div className="hero-buttons">
-              <Button className="cta-button cta-primary">
+              <Button
+                className="cta-button cta-primary"
+                onClick={() => {
+                  console.log("Download button clicked");
+                  window.open(APP_URL, "_blank");
+                }}
+              >
                 <Download className="btn-icon" />
                 Download Now
               </Button>
-              <Button className="cta-button cta-secondary">
+              <Button
+                className="cta-button cta-secondary"
+                onClick={() => {
+                  console.log("GitHub button clicked");
+                  window.open(SOURCE_CODE_URL, "_blank");
+                }}
+              >
                 <Github className="btn-icon" />
                 View on GitHub
               </Button>
@@ -301,14 +315,21 @@ export const LandingPage = () => {
           <div className="download-buttons">
             <Button
               className="download-btn download-primary"
-              onClick={() =>
-                window.open(import.meta.env.VITE_APP_LIVE_URL, "_blank")
-              }
+              onClick={() => {
+                console.log("Download button clicked");
+                window.open(APP_URL, "_blank");
+              }}
             >
               <Download className="btn-icon" />
               Download from Google Play
             </Button>
-            <Button className="download-btn download-github">
+            <Button
+              className="download-btn download-github"
+              onClick={() => {
+                console.log("GitHub download button clicked");
+                window.open(SOURCE_CODE_URL, "_blank");
+              }}
+            >
               <Github className="btn-icon" />
               Get from GitHub
             </Button>
@@ -355,7 +376,7 @@ export const LandingPage = () => {
               Privacy Policy
             </a>
             <a
-              href="https://github.com/publicappsrepo/musicfy_android.git"
+              href={SOURCE_CODE_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="footer-link"
