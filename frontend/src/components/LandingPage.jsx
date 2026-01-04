@@ -400,7 +400,7 @@ export const LandingPage = () => {
         </div>
         <div className="footer-bottom">
           <p className="footer-copyright">
-            © 2025 Musicfy. Free and Open Source Software.
+            © {new Date().getFullYear()} Musicfy. Free and Open Source Software.
           </p>
         </div>
       </footer>
